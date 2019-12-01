@@ -30,7 +30,8 @@ node('docker') {
           "target": "helloworld-greeting-project/${BUILD_NUMBER}/",
           "props": "Integration-Tested=Yes;Performance-Tested=No"
         }
-      ]"""
+       ]
+      }"""
     server.upload(uploadSpec)
   }
 }
