@@ -26,7 +26,7 @@ node('docker') {
     def uploadSpec = """{
       "files": [
         {
-          "pattern": "target/hello-0.0.1.war"
+          "pattern": "target/hello-0.0.1.war",
           "target": "helloworld-greeting-project/${BUILD_NUMBER}/",
           "props": "Integration-Tested=Yes;Performance-Tested=No"
         }
