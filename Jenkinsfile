@@ -1,4 +1,7 @@
 node('docker') {
+  stage('HelloWorld') {
+    sh 'echo JestemHelloWorldem!!!'
+  }
 
   stage('Poll') {
     scm checkout
