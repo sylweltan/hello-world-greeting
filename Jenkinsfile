@@ -52,7 +52,7 @@ node('docker_pt') {
   }
   stage('Promote build in Artifactory'){
     withCredentials([usernameColonPassword(credentialsId:'artifactory-account', variable: 'credentials')]) {
-      sh 'curl -u${credentials} -X PUT "http://10.0.6.165.8081/artifactory/api/storage/example-repo-local/${BUILD_NUMBER}/hello-0.0.1.war?properties=Performance-Tested=Yes"';
+      sh 'curl -u${credentials} -X PUT "http://10.0.6.165:8081/artifactory/api/storage/example-repo-local/${BUILD_NUMBER}/hello-0.0.1.war?properties=Performance-Tested=Yes"';
     }
   }
 }
