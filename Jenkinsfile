@@ -63,7 +63,7 @@ node ('production') {
     def downloadSpec = """{
       "files": [
         {
-          "pattern": "example-repo-local/${BUILD_NUMBER}/*.zip",
+          "pattern": "example-repo-local/${BUILD_NUMBER}/*.war",
           "target": "/home/jenkins/tomcat/webapps/",
           "props": "Performance-Tested=Yes,Integration-Tested=Yes"
         }
