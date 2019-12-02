@@ -63,9 +63,9 @@ node ('production') {
     def downloadSpec = """{
       "files": [
         {
-          "pattern": "example-project/$BUILD_NUMBER/*.zip",
-          "target": "/home/jenkins/tomcat/webapps/"
-          "props": "Performance-Tested=Yes,Integration-Tested=Yes",
+          "pattern": "example-repo-local/${BUILD_NUMBER}/*.zip",
+          "target": "/home/jenkins/tomcat/webapps/",
+          "props": "Performance-Tested=Yes,Integration-Tested=Yes"
         }
       ]
     }"""
